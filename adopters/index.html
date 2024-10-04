@@ -475,7 +475,7 @@ $(function() {
                         HTTP/1.1 200 OK<br/>
                         Content-Type: text/html; charset=UTF-8<br/>
                         link: &lt;https://zenodo.org/api/records/7977333&gt;<br> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"linkset"</b> ; type=<b>"application/linkset+json"</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"linkset"</b> ; type=<b>"application/linkset+json"</b>
                     </code>
                 </div>
                 <div>In order to retrieve the linkset, a client must use content negotiation for the <code>application/linkset+json</code> 
@@ -490,128 +490,130 @@ $(function() {
                     <code>curl --header "Accept: application/linkset+json" -i &quot;https://zenodo.org/api/records/7977333&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK
-                        content-type: application/linkset+json
-                        content-length: 2221<br><br>
+HTTP/1.1 200 OK
+content-type: application/linkset+json
+content-length: 2221
                         
-{<br>
-  "linkset": [<br>
-    {<br>
-      "anchor": "https://zenodo.org/records/7977333",<br>
-      "author": [<br>
-        {<br>
-          "href": "https://orcid.org/0000-0002-0715-6126"<br>
-        }<br>
-      ],<br>
-      "cite-as": [<br>
-        {<br>
-          "href": "https://doi.org/10.5281/zenodo.7977333"<br>
-        }<br>
-      ],<br>
-      "describedby": [<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/dcat+xml"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/ld+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/linkset+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/marcxml+xml"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.citationstyles.csl+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.datacite.datacite+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.datacite.datacite+xml"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.geo+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.inveniordm.v1+json"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.inveniordm.v1.full+csv"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/vnd.inveniordm.v1.simple+csv"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/x-bibtex"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "application/x-dc+xml"<br>
-        },<br>
-        {<br>
-          "href": "https://zenodo.org/api/records/7977333",<br>
-          "type": "text/x-bibliography"<br>
-        }<br>
-      ],<br>
-      "item": [<br>
-        {<br>
-          "href": "https://zenodo.org/records/7977333/files/FDO_and_FAIR_Signposting_with_notes.pdf",<br>
-          "type": "application/pdf"<br>
-        }<br>
-      ],<br>
-      "license": [<br>
-        {<br>
-          "href": "https://creativecommons.org/licenses/by/4.0/legalcode"<br>
-        }<br>
-      ],<br>
-      "type": [<br>
-        {<br>
-          "href": "https://schema.org/PresentationDigitalDocument"<br>
-        },<br>
-        {<br>
-          "href": "https://schema.org/AboutPage"<br>
-        }<br>
-      ]<br>
-    },<br>
-    {<br>
-      "anchor": "https://zenodo.org/records/7977333/files/FDO_and_FAIR_Signposting_with_notes.pdf",<br>
-      "collection": [<br>
-        {<br>
-          "href": "https://zenodo.org/records/7977333",<br>
-          "type": "text/html"<br>
-        }<br>
-      ]<br>
-    },<br>
-    {<br>
-      "anchor": "https://zenodo.org/api/records/7977333",<br>
-      "describes": [<br>
-        {<br>
-          "href": "https://zenodo.org/records/7977333",<br>
-          "type": "text/html"<br>
-        }<br>
-      ]<br>
-    }<br>
-  ]<br>
-}<br>
+{
+    "linkset": [
+    {
+      "anchor": "https://zenodo.org/records/7977333",
+      "author": [
+        {
+          "href": "https://orcid.org/0000-0002-0715-6126"
+        }
+      ],
+      "cite-as": [
+        {
+          "href": "https://doi.org/10.5281/zenodo.7977333"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/dcat+xml"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/ld+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/linkset+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/marcxml+xml"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.citationstyles.csl+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.datacite.datacite+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.datacite.datacite+xml"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.geo+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.inveniordm.v1+json"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.inveniordm.v1.full+csv"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/vnd.inveniordm.v1.simple+csv"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/x-bibtex"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "application/x-dc+xml"
+        },
+        {
+          "href": "https://zenodo.org/api/records/7977333",
+          "type": "text/x-bibliography"
+        }
+      ],
+      "item": [
+        {
+          "href": "https://zenodo.org/records/7977333/files/FDO_and_FAIR_Signposting_with_notes.pdf",
+          "type": "application/pdf"
+        }
+      ],
+      "license": [
+        {
+          "href": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        }
+      ],
+      "type": [
+        {
+          "href": "https://schema.org/PresentationDigitalDocument"
+        },
+        {
+          "href": "https://schema.org/AboutPage"
+        }
+      ]
+    },
+    {
+      "anchor": "https://zenodo.org/records/7977333/files/FDO_and_FAIR_Signposting_with_notes.pdf",
+      "collection": [
+        {
+          "href": "https://zenodo.org/records/7977333",
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "anchor": "https://zenodo.org/api/records/7977333",
+      "describes": [
+        {
+          "href": "https://zenodo.org/records/7977333",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}
                     </code>
+                    </pre>
                 </div>
                 
                 
