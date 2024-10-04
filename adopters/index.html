@@ -67,6 +67,7 @@ $(function() {
                                 	<li><a href="#eurac">eurac research Environmental Data Platform</a></li>
                                 	<li><a href="#FAIR-by-design">FAIR-by-Design Training Materials Repository</a></li>
                                 	<li><a href="#hal">HAL Open Science</a></li>
+                                	<li><a href="#holofood">Holofood Data Portal</a></li>
                                 	<li><a href="#invenio">InvenioRDM FAIR Signposting</a></li>
                                 	<li><a href="#ojs">Open Journal System FAIR Signposting</a></li>
                                 	<li><a href="#pangaea">Pangaea</a></li>
@@ -451,6 +452,43 @@ $(function() {
                     </code>
                 </div>
                 </div>
+                
+  <h3><a name="holifood"></a>Holofood Data Portal</h3>
+                <div>
+                    The <a href="https://hal.science">Holofood Data Portal</a> has done minimal Signposting interventions: 
+                    landing pages for samples for which the portal holds information provide a <code>describedby</code> 
+                    link to metadata that is available for the sample as well as  
+                    a <code>collection</code> link that points at a machine-readable inventory of samples. Note that this use of the 
+                    <code>collection</code> link is legitimate but semantically different than the one specified in the 
+                    <a href="https://signposting.org/FAIR/">FAIR Signposting Profile</a>, which is used to point from a 
+                    content resource of a <a href="https://signposting.org/conventions/#scholobject">scholarly object</a> 
+                    to the landing page that describes the <a href="https://signposting.org/conventions/#scholobject">scholarly object</a>.
+                </div>
+				<div>
+                This example shows the typed links for the landing page &lt;https://www.holofooddata.org/sample/SAMEA10104908&gt;:
+                <div style="background: #fff; margin: 0 10px;">
+                    <br>
+                    <code>curl -I &quot;https://www.holofooddata.org/sample/SAMEA10104908&quot;</code>
+                    <br>
+                    <br>
+                    <pre>
+                    <code>
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 61732
+Link: <https://www.holofooddata.org/api/samples/SAMEA10104908> 
+      ; rel="describedby" ; type="application/json" 
+      ; profile="https://www.holofooddata.org/api/openapi.json", 
+      <https://www.holofooddata.org/api/samples> 
+      ; rel="collection" ; type="application/json" 
+      ; profile="https://www.holofooddata.org/api/openapi.json"
+                    </code>
+                    </pre>
+                </div>
+                </div>
+                
+                
+                
                 
                 <h3><a name="invenio"></a>InvenioRDM FAIR Signposting</h3>
                     <div>
