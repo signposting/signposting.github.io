@@ -843,26 +843,24 @@ content-length: 2221
                     <code>curl -I &quot;https://digital.library.unt.edu/ark:/67531/metadc1477161/&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Length: 20<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        Link: &lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"cite-as"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/metadata.dc.xml&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"txt/xml"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://purl.org/dc/elements/1.1/"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/metadata.untl.xml&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"txt/xml"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://digital2.library.unt.edu/untl.xsd"</b>,<br>
-                        
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/manifest/&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/json+ld"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://iiif.io/api/presentation/2.1/"</b>
+HTTP/1.1 200 OK
+Content-Length: 20
+Content-Type: text/html; charset=UTF-8
+Link: &lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/&gt;
+; rel="cite-as",
+&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/metadata.dc.xml&gt;
+; rel="describedby" ; type="txt/xml"
+; profile="http://purl.org/dc/elements/1.1/",
+&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/metadata.untl.xml&gt;
+; rel="describedby" ; type="txt/xml"
+; profile="http://digital2.library.unt.edu/untl.xsd",
+&lt;https://digital.library.unt.edu/ark:/67531/metadc1477161/manifest/&gt;
+; rel="describedby" ; type="application/json+ld"
+; profile="http://iiif.io/api/presentation/2.1/"
                     </code>
+                    </pre>
                 </div>
                 </div>
                 
@@ -1098,7 +1096,7 @@ Link: &lt;https://workflowhub.eu/workflows/419?version=1&gt;
       &lt;https://workflowhub.eu/workflows/419?version=1&gt;
       ; rel="describedby" ; type="application/ld+json",
       &lt;https://workflowhub.eu/workflows/419/ro_crate?version=1&gt;
-      ; rel="item" ; type="application/zip" ;
+      ; rel="item" ; type="application/zip"
       ; profile="https://w3id.org/ro/crate"
                     </code>
                     </pre>
