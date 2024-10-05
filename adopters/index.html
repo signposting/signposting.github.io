@@ -1073,7 +1073,7 @@ content-length: 2221
                 <div>
                     <a href="https://workflowhub.eu/">WorkflowHub</a> is registry for describing, sharing and publishing scientific computational workflows. 
                     It facilitates discovery and re-use of workflows in an accessible and interoperable way by leveraging open standards and tools, including RO-Crate and Signposting.  
-                    The following Signposting patterns are used:</a>:
+                    The <a href="https://about.workflowhub.eu/developer/signposting/">Signposting patterns used by WorkflowHub</a> are:</a>:
                     <ul>
                          <li><a href="/patterns/metadata_resources/">Metadata Resources</a></li>
                         <li><a href="/patterns/content_resources/">Content Resources</a></li>
@@ -1088,21 +1088,20 @@ content-length: 2221
                     <code>curl -I &quot;https://workflowhub.eu/workflows/419&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        Content-Length: 30731<br/>
-                        Link: &lt;https://workflowhub.eu/workflows/419?version=1&gt; ;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b> ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=<b>"application/vnd.datacite.datacite+xml"</b>, <br>
-                        &lt;https://workflowhub.eu/workflows/419?version=1&gt; ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rel=<b>"describedby"</b> ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=<b>"application/ld+json"</b>, <br>
-                        &lt;https://workflowhub.eu/workflows/419/ro_crate?version=1&gt; ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rel=<b>"item"</b> ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=<b>"application/zip"</b> ; <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;profile=<b>"https://w3id.org/ro/crate"</b>
+                        HTTP/1.1 200 OK
+                        Content-Type: text/html; charset=UTF-8
+                        Content-Length: 30731
+                        Link: &lt;https://workflowhub.eu/workflows/419?version=1&gt;
+                              ; rel="describedby" ; type="application/vnd.datacite.datacite+xml",
+                              https://workflowhub.eu/workflows/419?version=1&gt;
+                              ; rel="describedby" ; type="application/ld+json",
+                              https://workflowhub.eu/workflows/419/ro_crate?version=1&gt;
+                              ; rel="item" ; type="application/zip" ;
+                              ; profile="https://w3id.org/ro/crate"
                     </code>
+                    </pre>
                 </div>
                 </div>
                 
