@@ -235,7 +235,7 @@ Link: &lt;https://0000-0003-2962-5234&gt;
       ; rel="describedby" ; type="application/vnd.citationstyles.csl+json",
       &lt;https://ssh.datastations.nl/api/datasets/export?exporter=schema.org&persistentId=doi:10.17026/SS/L8MCKA&gt;
       ; rel="describedby" ; type="application/ld+json", 
-      &lt;https://ssh.datastations.nl/api/datasets/:persistentId/versions/2.1/linkset?persistentId=doi:10.17026/SS/L8MCKA&gt;
+&lt;https://ssh.datastations.nl/api/datasets/:persistentId/versions/2.1/linkset?persistentId=doi:10.17026/SS/L8MCKA&gt;
       ; rel="linkset" ; type="application/linkset+json"
                     </code>
                     </pre>
@@ -299,18 +299,19 @@ Link: &lt;https://0000-0003-2962-5234&gt;
                     <code>curl -I &quot;https://ktisis.cut.ac.cy/handle/20.500.14279/23265&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        Content-Length: 43409<br/>
-                        Link: &lt;http://orcid.org/0000-0001-9079-1907&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"author"</b><br>
-                        Link: &lt;http://orcid.org/0000-0002-2229-8798&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"author"</b><br>
-                        Link: &lt;https://ktisis.cut.ac.cy/bitstream/20.500.14279/23265/1/021-0007%282021%29.pdf&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"item"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/pdf"</b>
+HTTP/1.1 200 OK      
+Content-Type: text/html; charset=UTF-8      
+Content-Length: 43409      
+Link: &lt;http://orcid.org/0000-0001-9079-1907&gt;      
+      ; rel="author"            
+Link: &lt;http://orcid.org/0000-0002-2229-8798&gt;      
+      ; rel="author"            
+Link: &lt;https://ktisis.cut.ac.cy/bitstream/20.500.14279/23265/1/021-0007%282021%29.pdf&gt;      
+      ; rel="item" ; type="application/pdf"      
                     </code>
+                    </pre>
                 </div>
                 <br/>
                 <div>
@@ -321,13 +322,15 @@ Link: &lt;https://0000-0003-2962-5234&gt;
                     <code>curl -I &quot;https://ktisis.cut.ac.cy/bitstream/20.500.14279/23265/1/021-0007%282021%29.pdf&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Length: 3109603<br/>
-                        Content-Type: application/pdf<br/>
-                        Link: &lt;https://ktisis.cut.ac.cy/handle/20.500.14279/23265&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"collection"</b>
+HTTP/1.1 200 OK
+Content-Length: 3109603
+Content-Type: application/pdf
+Link: &lt;https://ktisis.cut.ac.cy/handle/20.500.14279/23265&gt;
+      ; rel="collection"
                     </code>
+                    </pre>
                 </div>
                 </div>
                 
