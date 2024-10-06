@@ -1092,7 +1092,7 @@ Link: &lt;https://www.radar-service.eu/radar/en/export/yHWPudieWdGxmEnU/exportoa
                     
                  <h3><a name="ucd_digital_library"></a>UCD Digital Library</h3>
                 <div>
-                    The <a href="http://digital.ucd.ie/">University College Dublin Digital Library</a> has implemented the following Signposting patterns:
+                    The <a href="https://digital.ucd.ie/">University College Dublin Digital Library</a> has implemented the following Signposting patterns:
                     <ul>
                         <li><a href="/patterns/author/">Author</a></li>
                          <li><a href="/patterns/metadata_resources/">Metadata Resources</a></li>
@@ -1100,33 +1100,28 @@ Link: &lt;https://www.radar-service.eu/radar/en/export/yHWPudieWdGxmEnU/exportoa
                     </ul/>
                 </div>
 				<div>
-                This example shows the Identifier, Metadata Resources, and the Author patterns 
+                This example shows the Identifier and Metadata Resources patterns 
                 implemented for the <b>Landing Page URI</b>:
                 <div style="background: #fff; margin: 0 10px;">
                     <br>
-                    <code>curl -I &quot;http://digital.ucd.ie/view/ucdlib:31122&quot;</code>
+                    <code>curl -I &quot;https://digital.ucd.ie/view/ucdlib:271000&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Length: 20<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        Link: &lt;https://doi.org/10.7925/drs1.ucdlib_31122&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"cite-as"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://doi.org/10.7925/drs1.ucdlib_31122&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/vnd.citationstyles.csl+json"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://digital.ucd.ie/citation/ucdlib:31122/ris&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/x-research-info-systems"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://digital.ucd.ie/citation/ucdlib:31122/btx&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/x-bibtex"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;http://orcid.org/0000-0001-6092-9741&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"author"</b>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;http://orcid.org/0000-0001-5134-5322&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"author"</b>
+HTTP/1.1 200 OK
+Date: Sun, 06 Oct 2024 07:53:05 GMT
+Content-Type: text/html; charset=UTF-8
+Link: &lt;https://doi.org/10.7925/drs1.ucdlib_271000&gt;
+      ; rel="identifier",
+      &lt;https://doi.org/10.7925/drs1.ucdlib_271000&gt;
+      ; rel="describedby" ; type="application/vnd.citationstyles.csl+json", 
+      &lt;https://digital.ucd.ie/citation/ucdlib:271000/ris&gt;
+      ; rel="describedby" ; type="application/x-research-info-systems",
+      &lt;https://digital.ucd.ie/citation/ucdlib:271000/btx&gt;
+      ; rel="describedby" ; type="application/x-bibtex"
                     </code>
+                    </pre>
                 </div>
                 </div>
                 
