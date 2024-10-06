@@ -715,7 +715,7 @@ Link: &lt;https://www.holofooddata.org/api/samples/SAMEA10104908&gt;
                     <br>
                     <pre>
                     <code>
-HTTP/1.1 200 OK<br/>
+HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
 link: &lt;https://zenodo.org/api/records/7977333&gt;
       ; rel="linkset" ; type="application/linkset+json"
@@ -873,16 +873,94 @@ content-length: 2221
                     <code>curl -I &quot;https://www.annalsofgeophysics.eu/index.php/annals/article/view/8993&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Type: text/html;charset=utf-8<br/>
-                        Link: &lt;https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"linkset"</b></br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; type=<b>"application/linkset+json"</b>
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=utf-8
+Link: &lt;https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993&gt;
+      ; rel="linkset"
+      ; type="application/linkset+json"
                     </code>
+                    </pre>
                 </div>
                 <br/>
-                <div>Now, check out the linkset document by clicking its URL <a href="https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993">https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993</a>.
+                <div>Now, check out the linkset document by clicking its URL <a href="https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993">https://www.annalsofgeophysics.eu/index.php/annals/sp-linkset/article/8993</a>:
+                    <br>
+                    <br>
+                    <pre>
+                    <code>
+{
+  "linkset": {
+    "anchor": "https://www.annalsofgeophysics.eu/index.php/annals/article/view/8993",
+    "describedby": [
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=acm-sig-proceedings",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=acs-nano",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=apa",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=associacao-brasileira-de-normas-tecnicas",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=chicago-author-date",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=harvard-cite-them-right",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=ieee",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=modern-language-association",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=turabian-fullnote-bibliography",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=vancouver",
+        "type": "text/plain"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=ris",
+        "type": "application/x-Research-Info-Systems"
+      },
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/sp-citation/serveCitation/8993?format=bibtex",
+        "type": "application/x-bibtex"
+      },
+      {
+        "href": "https://doi.org/10.4401/ag-8993",
+        "type": "application/vnd.citationstyles.csl+json"
+      }
+    ],
+    "cite-as": [
+      {
+        "href": "https://doi.org/10.4401/ag-8993"
+      }
+    ],
+    "item": [
+      {
+        "href": "https://www.annalsofgeophysics.eu/index.php/annals/article/download/8993/7626",
+        "type": "application/pdf"
+      }
+    ]
+  }
+}
+                </code>
+                </pre>
                 </div>
             
                <h3><a name="pangaea"></a>Pangaea</h3>
