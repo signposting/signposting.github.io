@@ -713,12 +713,14 @@ Link: &lt;https://www.holofooddata.org/api/samples/SAMEA10104908&gt;
                     <code>curl -I &quot;https://zenodo.org/records/7977333&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        link: &lt;https://zenodo.org/api/records/7977333&gt;<br> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"linkset"</b> ; type=<b>"application/linkset+json"</b>
+HTTP/1.1 200 OK<br/>
+Content-Type: text/html; charset=UTF-8
+link: &lt;https://zenodo.org/api/records/7977333&gt;
+      ; rel="linkset" ; type="application/linkset+json"
                     </code>
+                    </pre>
                 </div>
                 <div>In order to retrieve the linkset, a client must use content negotiation for the <code>application/linkset+json</code> 
                 media type against the URL &lt;https://zenodo.org/api/records/7977333&gt;. The linkset contains all links recommended for 
