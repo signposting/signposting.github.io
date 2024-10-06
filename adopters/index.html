@@ -387,21 +387,29 @@ link: &lt;https://inbox.episciences.org/&gt;
                   <h3><a name="eurac"></a>eurac research Environmental Data Platform</h3>
 					<div>
                     The <a href="https://edp-portal.eurac.edu/discovery/">eurac research Environmental Data Platform</a> 
-                    supports FAIR Signposting by means of Link Sets that are discoverable via <code>linkset</code> links 
-                    provided in the HTML &lt;link&gt; element of dataset landing pages. 
-                    The landing page <a href="https://edp-portal.eurac.edu/discovery/31f0258a-5517-11ed-8c40-0050568e1483">https://edp-portal.eurac.edu/discovery/31f0258a-5517-11ed-8c40-0050568e1483</a> contains the 
-                    following entry:
+                    supports FAIR Signposting by means of <code>describedby</code> and <code>cite-as</code> links provided in the HTML &lt;link&gt; element of dataset landing pages.  
+                    A <code>linkset</code> is also provided but, at the time of writing, it points at a Link Set that is not properly implemented. 
+                    As an example, the HTML landing page <a href="https://edp-portal.eurac.edu/discovery/31f0258a-5517-11ed-8c40-0050568e1483">https://edp-portal.eurac.edu/discovery/31f0258a-5517-11ed-8c40-0050568e1483</a> contains the 
+                    following entries:
                     <br/>
-                    <br/>          
+                    <br/>
+                    <pre>       
                     <code>
-                    &lt;link rel=<b>"linkset"</b> type="application/linkset+json" </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483"&gt;</br>
+&lt;link rel="describedby" href="https://edp-portal.eurac.edu/geonetwork/srv/api/records/31f0258a-5517-11ed-8c40-0050568e1483/formatters/xml?approved=true" type="application/vnd.iso19139.metadata+xml"&gt;
+&lt;link rel="describedby" href="https://api.datacite.org/dois/10.48784/31f0258a-5517-11ed-8c40-0050568e1483" type="application/json"&gt;
+&lt;link rel="describedby" href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483?format=metadata_datacite4" type="application/vnd.datacite.datacite+xml"&gt;
+&lt;link rel="linkset" type="application/linkset+json" href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483"&gt;
+&lt;link rel="describedby" type="application/ld+json" href="https://edp-portal.eurac.edu/discovery/jsonld/31f0258a-5517-11ed-8c40-0050568e1483"&gt;
+&lt;link rel="cite-as" href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483"&gt; 
                     </code>
+                    </pre>
                 </div>
+                <!--
                 <div>
                 An HTTP GET on <a href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483">https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483</a> 
                 returns a Link Set in <code>application/linkset+json</code> format.
                 </div>
+                -->
                 
                    <h3><a name="FAIR-by-design"></a>FAIR-by-Design Training Materials Repository</h3>
                     <div>
