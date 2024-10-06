@@ -396,22 +396,22 @@ link: &lt;https://inbox.episciences.org/&gt;
                     <pre>       
                     <code>
 &lt;link rel="cite-as" 
-         href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483"&gt; 
+      href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483"&gt; 
 &lt;link rel="describedby" 
-         href="https://api.datacite.org/dois/10.48784/31f0258a-5517-11ed-8c40-0050568e1483" 
-         type="application/json"&gt;
+      href="https://api.datacite.org/dois/10.48784/31f0258a-5517-11ed-8c40-0050568e1483" 
+      type="application/json"&gt;
 &lt;link rel="describedby" 
-         href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483?format=metadata_datacite4" 
-         type="application/vnd.datacite.datacite+xml"&gt;
+      href="https://doi.org/10.48784/31f0258a-5517-11ed-8c40-0050568e1483?format=metadata_datacite4" 
+      type="application/vnd.datacite.datacite+xml"&gt;
 &lt;link rel="describedby" 
-         href="https://edp-portal.eurac.edu/discovery/jsonld/31f0258a-5517-11ed-8c40-0050568e1483"
-         type="application/ld+json"&gt;
+      href="https://edp-portal.eurac.edu/discovery/jsonld/31f0258a-5517-11ed-8c40-0050568e1483"
+      type="application/ld+json"&gt;
 &lt;link rel="describedby" 
-         href="https://edp-portal.eurac.edu/geonetwork/srv/api/records/31f0258a-5517-11ed-8c40-0050568e1483/formatters/xml?approved=true" 
-         type="application/vnd.iso19139.metadata+xml"&gt;
+      href="https://edp-portal.eurac.edu/geonetwork/srv/api/records/31f0258a-5517-11ed-8c40-0050568e1483/formatters/xml?approved=true" 
+      type="application/vnd.iso19139.metadata+xml"&gt;
 &lt;link rel="linkset" 
-         href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483"
-         type="application/linkset+json"&gt;
+      href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483"
+      type="application/linkset+json"&gt;
                     </code>
                     </pre>
                 </div>
@@ -440,8 +440,8 @@ link: &lt;https://inbox.episciences.org/&gt;
                     <pre>
                     <code>
 &lt;link rel="linkset"
-         href="https://raw.githubusercontent.com/FAIR-by-Design-Methodology/FAIR-by-Design_ToT/main/linkset.json"&gt;
-         type="application/json+linkset"
+      href="https://raw.githubusercontent.com/FAIR-by-Design-Methodology/FAIR-by-Design_ToT/main/linkset.json"&gt;
+      type="application/json+linkset"
                     </code>
                     </pre>
                 </div>
@@ -631,27 +631,29 @@ link: &lt;https://inbox.episciences.org/&gt;
                     <code>curl -I &quot;https://hal.science/hal-03087870v1&quot;</code>
                     <br>
                     <br>
+                    <pre>
                     <code>
-                        HTTP/1.1 200 OK<br/>
-                        Content-Type: text/html; charset=UTF-8<br/>
-                        link:  &lt;https://inbox.hal.science/&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"http://www.w3.org/ns/ldp#inbox"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870v1&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"cite-as"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870/bibtex&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b>; type=<b>"application/x-bibtex"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870/json&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b>; type=<b>"application/json"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870/tei&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b>; type=<b>"application/xml"</b><br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://www.tei-c.org/ns/1.0"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870/dc&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b>; type=<b>"application/xml"</b><br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://purl.org/dc/elements/1.1/"</b>, <br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://hal.science/hal-03087870/dcterms&gt;<br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; rel=<b>"describedby"</b>; type=<b>"application/xml"</b><br>
-  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; profile=<b>"http://purl.org/dc/terms/"</b><br>
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+link:  &lt;https://inbox.hal.science/&gt;
+       ; rel="http://www.w3.org/ns/ldp#inbox", 
+       &lt;https://hal.science/hal-03087870v1&gt;
+       ; rel="cite-as", 
+       &lt;https://hal.science/hal-03087870/bibtex&gt;
+       ; rel="describedby"; type="application/x-bibtex", 
+       &lt;https://hal.science/hal-03087870/json&gt;
+       ; rel="describedby"; type="application/json", 
+       &lt;https://hal.science/hal-03087870/tei&gt;
+       ; rel="describedby"; type="application/xml"
+       ; profile="http://www.tei-c.org/ns/1.0", 
+       &lt;https://hal.science/hal-03087870/dc&gt;
+       ; rel="describedby"; type="application/xml"
+       ; profile="http://purl.org/dc/elements/1.1/", 
+       &lt;https://hal.science/hal-03087870/dcterms&gt;
+       ; rel="describedby"; type="application/xml"
+       ; profile="http://purl.org/dc/terms/"
                     </code>
+                    </pre>
                 </div>
                 </div>
                 
