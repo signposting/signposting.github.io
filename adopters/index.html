@@ -1113,11 +1113,13 @@ link: &lt;https://doi.org/10.1594/PANGAEA.867908&gt;
             
             <h3><a name="pythonclient"></a>Python client for FAIR Signposting </h3>
                             <div>
-                    This <a href="https://signposting.readthedocs.io/en/latest/readme.html">Python library</a> helps client to discover links that follow the signposting conventions, most notably <a href="https://signposting.org/FAIR/">FAIR Signposting</a>. This can then be used to navigate between persistent identifiers, 
-    				HTML landing pages, file downloads/items, structured metadata. As <a href="https://signposting.readthedocs.io/en/latest/usage.html">this example</a> shows, the library works by inspecting the HTTP messages for Link headers from a given URI
+                    This <a href="https://signposting.readthedocs.io/en/latest/readme.html">Python library and command line tool</a> helps client to discover links that follow the signposting conventions, most notably <a href="https://signposting.org/FAIR/">FAIR Signposting</a>. 
+                    This can then be used to navigate between persistent identifiers, 
+    				HTML landing pages, content resources (downloads/items), metadata resources. As <a href="https://signposting.readthedocs.io/en/latest/usage.html">this example</a> shows, 
+    				the tool works by inspecting the HTTP messages for Link headers from a given URI
     				and categorize them by their Link relation type into a Signposting object with absolute URIs. It is up to the clients of this library to decide how to further navigate or retrieve 
     				the associated resources, e.g. using an RDF library like <a href="https://rdflib.readthedocs.io/en/stable/">rdflib</a> or retrieving resources using <a href="https://docs.python.org/3/library/urllib.html">urllib</a>. 
-    				Future versions of this library may also provide ways to discover FAIR signposting in HTML &;ltlink&gt; elements and in <a href="https://signposting.org/FAIR/#linksetrec">linkset</a> documents.
+    				The tool also supports discovering FAIR signposting provided in HTML &lt;link&gt; elements and in JSON <a href="https://signposting.org/FAIR/#linksetrec">linkset</a> documents.
                 </div>
                 
                 
