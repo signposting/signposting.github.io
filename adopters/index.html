@@ -70,6 +70,7 @@ $(function() {
                                 	<li><a href="#hal">HAL Open Science</a></li>
                                 	<li><a href="#holofood">Holofood Data Portal</a></li>
                                 	<li><a href="#invenio">InvenioRDM FAIR Signposting</a></li>
+                                	<li><a href="#js">JavaScript client for FAIR Signposting</a></li>
                                 	<li><a href="#ojs">Open Journal System FAIR Signposting</a></li>
                                 	<li><a href="#pangaea">Pangaea</a></li>
                                 	<li><a href="#plack">Plack Middleware Signposting support</a></li>
@@ -103,7 +104,7 @@ $(function() {
                             <div>
                     The <a href="https://s11.no/2022/a2a-fair-metrics/">Apples-to-Apples FAIR Signposting</a> page gives access to a set of benchmarks that clients can use to test their capabilities for extracting Signposting links.
                     The benchmarks cover cases whereby web links are provided in HTTP Link headers, HTML &lt;link&gt; elements, 
-                    and <a href="https://www.rfc-editor.org/rfc/rfc9264.html">Link Sets</a> (in both JSON and text format) made discoverable via Link headers and HTML &lt;link&gt; elements.
+                    and <a href="https://www.rfc-editor.org/rfc/rfc9264.html">Link Sets</a> (in both JSON and Link header format) made discoverable via Link headers and HTML &lt;link&gt; elements.
                    The benchmarks include links that use a subset of FAIR Signposting link relation types, i.e. <code>cite-as</code>, <code>item</code>, and <code>describedby</code> and result from <a href="https://signposting.org/FAIR/apples-hackathon/">a hackathon</a> that focused on assessing 
                    FAIR Signposting compliance.
                 </div>
@@ -940,6 +941,20 @@ content-length: 2221
                     </code>
                     </pre>
                 </div>
+                
+                
+                    <h3><a name="js"></a>JavaScript client for FAIR Signposting</h3>
+                    <div>
+                    This <a href="https://www.npmjs.com/package/signposting-cli">JavaScript library and command line tool</a> provides support to discover 
+                    typed links from HTTP Link headers, HTML &lt;link&gt; elements, 
+                    as well as from <a href="https://www.rfc-editor.org/rfc/rfc9264.html">Link Sets</a> (in both JSON and Link header format). 
+                    The client provides a command line tool to navigate and retrieve links. 
+                    For development purposes, a tiny web server is provided that 
+                    provides demonstration artefacts that contain Signposting links.
+                    
+                    
+                     </div> 
+                
                 
                 
                 <h3><a name="ojs"></a>The Open Journal System FAIR Signposting Profile</h3>
