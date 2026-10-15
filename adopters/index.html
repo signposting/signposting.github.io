@@ -496,8 +496,6 @@ link: &lt;https://inbox.episciences.org/&gt;
                     in both HTML landing pages and HTTP headers.  
                     As an example, the HTML landing page <a href="https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk">https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk</a> contains the 
                     following entries:
-                    <br/>
-                    <br/>
                     <pre>       
                     <code>
 &lt;link rel="linkset" 
@@ -508,20 +506,15 @@ link: &lt;https://inbox.episciences.org/&gt;
       type="application/linkset+json"&gt;
                     </code>
                     </pre>
-                    <br/>
-                    <br/>
                     And the HTTP header for that same HTML landing page contains the following entries:
-                    <br/>
-                    <br/>
                     <pre>       
                     <code>
 link: &lt;https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset&gt;; rel="linkset"; type="application/linkset",
 link: &lt;https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset.json&gt;; rel="linkset"; type="application/linkset+json"
                     </code>
                     </pre>
-                    <br/>
-                    <br/>
-The provided Link Sets are very expressive and include <code>type</code> links that reveal the nature of resources, i.e. 
+The provided Link Sets are very expressive. They include links originating both in the landing page and the downloadable content resources. 
+And they also include <code>type</code> links that reveal the nature of each resource, i.e. 
 <code>href":"https://schema.org/Dataset</code>, <code>href":"https://schema.org/AboutPage</code>, <code>href":"https://schema.org/DataDownload</code>.
 Check it out:
                  <pre>
