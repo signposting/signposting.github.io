@@ -62,11 +62,13 @@ $(function() {
                                 	<li><a href="#compass">Compass Java library for Signposting</a></li>
                                 	<li><a href="#dans">DANS Data Stations</a></li>
                                 	<li><a href="#dataverse">Dataverse FAIR Signposting</a></li>
-									<li><a href="#dri">Digital Repository Ireland</a></li>  
+									<li><a href="#dri">Digital Repository Ireland</a></li> 
+									<li><a href="#dryad">Dryad</a></li> 
                                 	<li><a href="#dspace7">DSpace 7 FAIR Signposting</a></li>
                                 	<li><a href="#dspacecris">DSpace-CRIS</a></li>
                                 	<li><a href="#episciences">Episciences Overlay Journals</a></li>
                                 	<li><a href="#eurac">eurac research Environmental Data Platform</a></li>
+                                	<li><a href="#figshare">figshare</a></li>
                                 	<li><a href="#FAIR-by-design">FAIR-by-Design Training Materials Repository</a></li>
                                 	<li><a href="#hal">HAL Open Science</a></li>
                                 	<li><a href="#holofood">Holofood Data Portal</a></li>
@@ -261,7 +263,13 @@ Link: &lt;https://0000-0003-2962-5234&gt;
                     exposing links by means of the HTTP Link header as well as using <a href="https://signposting.org/FAIR/#linksetrec">linkset</a> documents. At the time of writing, the Dataverse software is used by nearly 100 data repositories, worldwide.
                 </div>
                 <br>
-                <div>An example of a typical FAIR Signposting implementation for a Dataverse instance is shown below for a <a href="#dans">DANS Data Station</a>.</div>
+                <div>An example of a typical FAIR Signposting implementation for a Dataverse instance is shown below for a <a href="#dans">DANS Data Station</a>.
+                <br />
+                <br />
+                    Dataverse is part of the NIH's <a href="https://datascience.nih.gov/data-ecosystem/generalist-repository-ecosystem-initiative">Generalist Repository Ecosystem Initiative</a>, 
+                    which aims to establish a common set of cohesive and consistent capabilities, services, metrics, and social infrastructure across generalist repositories.
+                
+                </div>
                 
                 
                 <h3><a name="dri"></a>Digital Repository Ireland</h3>
@@ -478,6 +486,257 @@ link: &lt;https://inbox.episciences.org/&gt;
                 </div>
                 </div>
                 
+                
+                  <h3><a name="dryad"></a>Dryad</h3>
+					<div>
+					Dryad is part of the NIH's <a href="https://datascience.nih.gov/data-ecosystem/generalist-repository-ecosystem-initiative">Generalist Repository Ecosystem Initiative</a>, 
+                    which aims to establish a common set of cohesive and consistent capabilities, services, metrics, and social infrastructure across generalist repositories.
+                    Dryad has an impeccable FAIR Signposting implementation that provides 
+                    <code>linkset</code> links pointing to Link Sets in both serializations 
+                    in both HTML landing pages and HTTP headers.  
+                    As an example, the HTML landing page <a href="https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk">https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk</a> contains the 
+                    following entries:
+                    <br/>
+                    <br/>
+                    <pre>       
+                    <code>
+&lt;link rel="linkset" 
+      href="https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset" 
+      type="application/linkset"&gt;
+&lt;link rel="linkset" 
+      href="https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset.json" 
+      type="application/linkset+json"&gt;
+                    </code>
+                    </pre>
+                    <br/>
+                    <br/>
+                    And the HTTP header for that same HTML landing page contains the following entries:
+                    <br/>
+                    <br/>
+                    <pre>       
+                    <code>
+link: &lt;https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset&gt;; rel="linkset"; type="application/linkset",
+link: &lt;https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk/linkset.json&gt;; rel="linkset"; type="application/linkset+json"
+                    </code>
+                    </pre>
+                    <br/>
+                    <br/>
+The provided Link Sets are very expressive and include <code>type</code> links that reveal the nature of resources, i.e. 
+<code>href":"https://schema.org/Dataset</code>, <code>href":"https://schema.org/AboutPage</code>, <code>href":"https://schema.org/DataDownload</code>.
+Check it out:
+                 <pre>
+                 <code>
+{
+  "linkset": [
+    {
+      "anchor": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+      "cite-as": [
+        {
+          "href": "https://doi.org/10.5061/dryad.sn02v6xkk"
+        }
+      ],
+      "type": [
+        {
+          "href": "https://schema.org/Dataset"
+        },
+        {
+          "href": "https://schema.org/AboutPage"
+        }
+      ],
+      "license": [
+        {
+          "href": "https://spdx.org/licenses/CC0-1.0.html"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://doi.org/10.5061/dryad.sn02v6xkk",
+          "type": "application/vnd.datacite.datacite+json"
+        }
+      ],
+      "author": [
+        {
+          "href": "https://orcid.org/0000-0003-2118-4593"
+        },
+        {
+          "href": "https://orcid.org/0000-0002-3474-4767"
+        }
+      ],
+      "item": [
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982225",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982226",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982227",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982228",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982229",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982230",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982231",
+          "type": "text/csv"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982235",
+          "type": "text/markdown"
+        },
+        {
+          "href": "https://datadryad.org/downloads/file_stream/4982236",
+          "type": "text/markdown"
+        }
+      ]
+    },
+    [
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982225",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982226",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982227",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982228",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982229",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982230",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982231",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982235",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      },
+      {
+        "anchor": "https://datadryad.org/downloads/file_stream/4982236",
+        "type": [
+          {
+            "href": "https://schema.org/DataDownload"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://datadryad.org/dataset/doi:10.5061/dryad.sn02v6xkk",
+            "type": "text/html"
+          }
+        ]
+      }
+    ]
+  ]
+}
+                   </code>
+                   </pre>
+               
+                </div>
+                
+                
                   <h3><a name="eurac"></a>eurac research Environmental Data Platform</h3>
 					<div>
                     The <a href="https://edp-portal.eurac.edu/discovery/">eurac research Environmental Data Platform</a> 
@@ -509,12 +768,10 @@ link: &lt;https://inbox.episciences.org/&gt;
                     </code>
                     </pre>
                 </div>
-                <!--
-                <div>
-                An HTTP GET on <a href="https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483">https://edp-portal.eurac.edu/discovery/linkset/31f0258a-5517-11ed-8c40-0050568e1483</a> 
-                returns a Link Set in <code>application/linkset+json</code> format.
-                </div>
-                -->
+                
+                
+                
+
                 
                    <h3><a name="FAIR-by-design"></a>FAIR-by-Design Training Materials Repository</h3>
                     <div>
@@ -706,6 +963,45 @@ link: &lt;https://inbox.episciences.org/&gt;
                     </code>
                     </pre>
                  </div>
+                 
+                 
+                  <h3><a name="figshare"></a>figshare</h3>
+					<div>
+                    Figshare repositories, including <a href="https://figshare.com">the central figshare instance</a> 
+                    support FAIR Signposting by means of <code>author</code>, <code>cite-as</code>, <code>license</code>, and <code>describedby</code> links provided in the HTML &lt;link&gt; element of landing pages.  
+                    As an example, <a href="https://figshare.com/articles/dataset/DNA_files_of_all_substrate_proteins_produced_and_described_in_Ryan_et_al_A_signaling_inspired_synthetic_toolkit_for_efficient_production_of_tyrosine_phosphorylated_proteins_/28296383">this landing page</a> includes the 
+                    following entries:
+                    <br/>
+                    <br/>
+                    <pre>       
+                    <code>
+&lt;link rel="cite-as" 
+      href="https://doi.org/10.6084/m9.figshare.28296383.v1"&gt; 
+&lt;link rel="author" 
+      href="https://figshare.com/authors/Kristen_Naegle/8206152"&gt; 
+&lt;link rel="license" 
+      href="https://creativecommons.org/licenses/by/4.0/"&gt;
+&lt;link rel="item" 
+      href="https://figshare.com/ndownloader/articles/28296383/versions/1" 
+      type="application/zip"/&gt;      
+&lt;link rel="describedby" 
+      href="/articles/28296383/1/citations/datacite" 
+      type="application/vnd.datacite.datacite+xml"&gt;
+&lt;link rel="describedby" 
+      href="/articles/28296383/1/citations/bibtex"
+      type="application/x-bibtex"&gt;
+&lt;link rel="describedby" 
+      href="/articles/28296383/1/citations/reference_manager"
+      type="application/x-research-info-systems"&gt;
+                    </code>
+                    </pre>
+                    <br/>
+                    <br/>
+                    Figshare is part of the NIH's <a href="https://datascience.nih.gov/data-ecosystem/generalist-repository-ecosystem-initiative">Generalist Repository Ecosystem Initiative</a>, 
+                    which aims to establish a common set of cohesive and consistent capabilities, services, metrics, and social infrastructure across generalist repositories.
+                </div>
+                 
+                 
                 
                 <h3><a name="hal"></a>HAL Open Science</h3>
                 <div>
@@ -788,11 +1084,14 @@ Link: &lt;https://www.holofooddata.org/api/samples/SAMEA10104908&gt;
                 
                 
                 
-                <h3><a name="invenio"></a>InvenioRDM FAIR Signposting</h3>
+                <h3><a name="invenioRDM"></a>InvenioRDM FAIR Signposting</h3>
                     <div>
                     Starting with v12, <a href="https://inveniosoftware.org/products/rdm/">IvenioRDM</a> supports FAIR Signposting. 
                     Since <a href="https://zenodo.org/">Zenodo</a> is an InvenioRDM instance, it also supports FAIR Signposting. 
-                    
+                    Zenodo is part of the NIH's <a href="https://datascience.nih.gov/data-ecosystem/generalist-repository-ecosystem-initiative">Generalist Repository Ecosystem Initiative</a>, 
+                    which aims to establish a common set of cohesive and consistent capabilities, services, metrics, and social infrastructure across generalist repositories.
+					<br />
+                    <br />
                     Support is implemented by  
                     exposing links using <a href="https://signposting.org/FAIR/#linksetrec">linkset</a> documents. 
                     </div> 
@@ -966,6 +1265,9 @@ content-length: 2221
                     
                     
                      </div> 
+                       
+                
+                
                 
                 
                 
